@@ -1,9 +1,7 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-    <title>
-        Agata - Personal Website
-    </title>
+    <title>Agata - Personal Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>"
@@ -11,11 +9,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
-
+    <!-- Enlace al nuevo CSS para la sección de proyectos -->
+    <link rel="stylesheet" href="projects.css">
 </head>
 
 <body>
-
     <div class="container">
         <img alt="Profile picture of Agata Morales" class="profile-img" height="100"
             src="https://avatars.githubusercontent.com/u/110565397?v=4" width="100" />
@@ -25,40 +23,142 @@
         <div class="welcome">
             Welcome to my personal website!✨
         </div>
-        <ul class="links">
-
-            <li>
-                <a class="link" href="https://github.com/lessslie" target="_blank">
-                    <i class="fab fa-github">
-                    </i>
-                    <span>
-                        GitHub
-                    </span>
-                    <i class="fas fa-external-link-alt">
-                    </i>
-                </a>
-            </li>
-            <li>
-                <a class="link" href="https://www.linkedin.com/in/agata-morales/" target="_blank">
-                    <i class="fab fa-linkedin">
-                    </i>
-                    <span>
-                        LinkedIn
-                    </span>
-                    <i class="fas fa-external-link-alt">
-                    </i>
-                </a>
-            </li>
-
-            <li>
-                <a class="link" href="mailto:agata.morales92@gmail.com" target="_blank">
-                    <i class="fas fa-envelope"></i>
-                    <span>E-mail</span>
-                    <i class="fas fa-external-link-alt"></i>
-                </a>
-            </li>
-        </ul>
+        
+        <!-- Navegación simple -->
+        <div class="nav-tabs">
+            <a href="#profile" class="nav-tab active">Perfil</a>
+            <a href="#projects" class="nav-tab">Proyectos</a>
+        </div>
+        
+        <!-- Sección de perfil (links originales) -->
+        <div id="profile-section" class="section active">
+            <ul class="links">
+                <li>
+                    <a class="link" href="https://github.com/lessslie" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="https://www.linkedin.com/in/agata-morales/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="mailto:agata.morales92@gmail.com" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                        <span>E-mail</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Sección de proyectos (nuevo) -->
+<div id="projects-section" class="section">
+    <div class="project-card">
+        <div class="project-header">
+            <span class="project-badge team">Trabajo en Equipo</span>
+            <h3>Plataforma de Gestión para Cementerio Parque Valle de Paz</h3>
+        </div>
+        <p class="project-description">
+            Backend Developer en un equipo de 6 desarrolladores (3 backend, 3 frontend). Contribuí al desarrollo de APIs RESTful para la gestión de un cementerio parque, implementando sistema de autenticación y autorización con roles, diseño de modelos de datos y documentación con Swagger.
+        </p>
+        <div class="tech-container">
+            <span class="tech-tag backend">Node.js</span>
+            <span class="tech-tag backend">Nest.js</span>
+            <span class="tech-tag backend">TypeScript</span>
+            <span class="tech-tag database">PostgreSQL</span>
+            <span class="tech-tag backend">TypeORM</span>
+            <span class="tech-tag backend">JWT</span>
+            <span class="tech-tag">Swagger</span>
+            <span class="tech-tag">Nodemailer</span>
+        </div>
+        <div class="project-links">
+            <a href="https://cementerio-parque-api.onrender.com/api" class="project-link">
+                <i class="fas fa-play-circle"></i>
+                <span>Demo API</span>
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://deployfront-rouge.vercel.app/" class="project-link">
+                <i class="fas fa-desktop"></i>
+                <span>Demo Aplicación</span>
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://github.com/ProyectoFinalGroup1/back" class="project-link">
+                <i class="fas fa-code"></i>
+                <span>Repositorio Backend</span>
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://github.com/ProyectoFinalGroup1/front" class="project-link">
+                <i class="fas fa-code"></i>
+                <span>Repositorio Frontend</span>
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
     </div>
-</body>
+    
+    <div class="project-card">
+        <div class="project-header">
+            <span class="project-badge solo">Desarrollo Individual</span>
+            <h3>E-commerce Backend</h3>
+            <div class="project-meta">
+                <span class="project-date">Dic. 2024 - Ene. 2025</span>
+                <span class="project-association">Asociada con Henry</span>
+            </div>
+        </div>
+        <p class="project-description">
+            Desarrollé el backend completo de una plataforma de comercio electrónico implementando arquitectura RESTful con NestJS y TypeScript. El sistema incluye autenticación de usuarios, gestión de productos, carrito de compras y procesamiento de pedidos. El proyecto demuestra mis habilidades en diseño de APIs robustas, implementación de patrones de diseño, manejo eficiente de bases de datos y prácticas de desarrollo seguro.
+        </p>
+        <div class="tech-container">
+            <span class="tech-tag backend">NestJS</span>
+            <span class="tech-tag backend">TypeScript</span>
+            <span class="tech-tag database">PostgreSQL</span>
+            <span class="tech-tag">Swagger</span>
+            <span class="tech-tag">Render</span>
+            <span class="tech-tag database">Supabase</span>
+        </div>
+        <div class="project-links">
+            <a href="https://ecommerce-g9u2.onrender.com/api" class="project-link">
+                <i class="fas fa-book"></i>
+                <span>Documentación API</span>
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://github.com/lessslie/Ecommerce" class="project-link">
+                <i class="fas fa-code"></i>
+                <span>Repositorio</span>
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
+    </div>
+</div>
 
+    <!-- JavaScript simple para la navegación entre pestañas -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.nav-tab');
+            const sections = document.querySelectorAll('.section');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Desactivar todas las pestañas y secciones
+                    tabs.forEach(t => t.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+                    
+                    // Activar la pestaña actual
+                    this.classList.add('active');
+                    
+                    // Activar la sección correspondiente
+                    const targetId = this.getAttribute('href').substring(1) + '-section';
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
 </html>

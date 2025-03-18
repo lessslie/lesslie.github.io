@@ -1,0 +1,168 @@
+/* CSS adicional para la sección de proyectos - projects.css */
+
+/* Navegación con pestañas */
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .nav-tab {
+    color: #a0a0a0;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  
+  .nav-tab:hover {
+    background-color: #3d3d4a;
+    color: #e0e0e0;
+  }
+  
+  .nav-tab.active {
+    background-color: #3d3d4a;
+    color: #e0e0e0;
+    font-weight: bold;
+  }
+  
+  /* Secciones */
+  .section {
+    display: none;
+  }
+  
+  .section.active {
+    display: block;
+  }
+  
+  /* Tarjetas de proyectos */
+  .project-card {
+    background-color: #3d3d4a;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .project-header {
+    margin-bottom: 15px;
+  }
+  
+  .project-header h3 {
+    margin: 10px 0;
+    font-size: 20px;
+  }
+  
+  /* Badges de proyectos */
+  .project-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .project-badge.team {
+    background-color: rgba(253, 126, 20, 0.2);
+    color: #fd7e14;
+  }
+  
+  .project-badge.solo {
+    background-color: rgba(13, 202, 240, 0.2);
+    color: #0dcaf0;
+  }
+  
+  /* Descripción del proyecto */
+  .project-description {
+    color: #c0c0c0;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  
+  /* Contenedor de tecnologías */
+  .tech-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  
+  /* Etiquetas de tecnologías */
+  .tech-tag {
+    background-color: rgba(170, 170, 170, 0.2);
+    color: #e0e0e0;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+  }
+  
+  .tech-tag.backend {
+    background-color: rgba(138, 43, 226, 0.2);
+    color: #ba55d3;
+  }
+  
+  .tech-tag.database {
+    background-color: rgba(46, 204, 113, 0.2);
+    color: #2ecc71;
+  }
+  
+  /* Enlaces de proyectos */
+  .project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .project-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border: 1px solid #4d4d5a;
+    color: #e0e0e0;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .project-link:hover {
+    background-color: #4d4d5a;
+  }
+  
+  .project-link i:first-child {
+    margin-right: 10px;
+  }
+  
+  .project-link span {
+    flex-grow: 1;
+    text-align: left;
+  }
+  
+  .project-link .fa-external-link-alt {
+    color: #999;
+  }
+  
+  /* Media queries para responsividad */
+  @media (max-width: 480px) {
+    .project-header h3 {
+      font-size: 18px;
+    }
+    
+    .project-badge {
+      font-size: 12px;
+    }
+    
+    .project-description {
+      font-size: 14px;
+    }
+    
+    .tech-tag {
+      font-size: 11px;
+    }
+    
+    .nav-tab {
+      padding: 6px 15px;
+      font-size: 14px;
+    }
+  }
