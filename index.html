@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- Enlace al nuevo CSS para la sección de proyectos -->
     <link rel="stylesheet" href="projects.css">
+    <!-- Biblioteca para generar códigos QR -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
 </head>
 
 <body>
@@ -28,6 +30,7 @@
         <div class="nav-tabs">
             <a href="#profile" class="nav-tab active">Perfil</a>
             <a href="#projects" class="nav-tab">Proyectos</a>
+            <a href="#qr-code" class="nav-tab">Mi QR</a>
         </div>
         
         <!-- Sección de perfil (links originales) -->
@@ -57,84 +60,96 @@
             </ul>
         </div>
         
-        <!-- Sección de proyectos (nuevo) -->
-<div id="projects-section" class="section">
-    <div class="project-card">
-        <div class="project-header">
-            <span class="project-badge team">Trabajo en Equipo</span>
-            <h3>Plataforma de Gestión para Cementerio Parque Valle de Paz</h3>
-        </div>
-        <p class="project-description">
-            Backend Developer en un equipo de 6 desarrolladores (3 backend, 3 frontend). Contribuí al desarrollo de APIs RESTful para la gestión de un cementerio parque, implementando sistema de autenticación y autorización con roles, diseño de modelos de datos y documentación con Swagger.
-        </p>
-        <div class="tech-container">
-            <span class="tech-tag backend">Node.js</span>
-            <span class="tech-tag backend">Nest.js</span>
-            <span class="tech-tag backend">TypeScript</span>
-            <span class="tech-tag database">PostgreSQL</span>
-            <span class="tech-tag backend">TypeORM</span>
-            <span class="tech-tag backend">JWT</span>
-            <span class="tech-tag">Swagger</span>
-            <span class="tech-tag">Nodemailer</span>
-        </div>
-        <div class="project-links">
-            <a href="https://cementerio-parque-api.onrender.com/api" class="project-link">
-                <i class="fas fa-play-circle"></i>
-                <span>Demo API</span>
-                <i class="fas fa-external-link-alt"></i>
-            </a>
-            <a href="https://deployfront-rouge.vercel.app/" class="project-link">
-                <i class="fas fa-desktop"></i>
-                <span>Demo Aplicación</span>
-                <i class="fas fa-external-link-alt"></i>
-            </a>
-            <a href="https://github.com/ProyectoFinalGroup1/back" class="project-link">
-                <i class="fas fa-code"></i>
-                <span>Repositorio Backend</span>
-                <i class="fas fa-external-link-alt"></i>
-            </a>
-            <a href="https://github.com/ProyectoFinalGroup1/front" class="project-link">
-                <i class="fas fa-code"></i>
-                <span>Repositorio Frontend</span>
-                <i class="fas fa-external-link-alt"></i>
-            </a>
-        </div>
-    </div>
-    
-    <div class="project-card">
-        <div class="project-header">
-            <span class="project-badge solo">Desarrollo Individual</span>
-            <h3>E-commerce Backend</h3>
-            <div class="project-meta">
-                <span class="project-date">Dic. 2024 - Ene. 2025</span>
-                <span class="project-association">Asociada con Henry</span>
+        <!-- Sección de código QR (nuevo) -->
+        <div id="qr-code-section" class="section">
+            <div class="qr-container">
+                <h2>Escanea mi código QR</h2>
+                <p>Escanea este código QR para visitar mi portfolio</p>
+                <div id="qrcode"></div>
+                <button id="download-qr" class="qr-download-btn">
+                    <i class="fas fa-download"></i> Descargar QR
+                </button>
             </div>
         </div>
-        <p class="project-description">
-            Desarrollé el backend completo de una plataforma de comercio electrónico implementando arquitectura RESTful con NestJS y TypeScript. El sistema incluye autenticación de usuarios, gestión de productos, carrito de compras y procesamiento de pedidos. El proyecto demuestra mis habilidades en diseño de APIs robustas, implementación de patrones de diseño, manejo eficiente de bases de datos y prácticas de desarrollo seguro.
-        </p>
-        <div class="tech-container">
-            <span class="tech-tag backend">NestJS</span>
-            <span class="tech-tag backend">TypeScript</span>
-            <span class="tech-tag database">PostgreSQL</span>
-            <span class="tech-tag">Swagger</span>
-            <span class="tech-tag">Render</span>
-            <span class="tech-tag database">Supabase</span>
+        
+        <!-- Sección de proyectos (nuevo) -->
+        <div id="projects-section" class="section">
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-badge team">Trabajo en Equipo</span>
+                    <h3>Plataforma de Gestión para Cementerio Parque Valle de Paz</h3>
+                </div>
+                <p class="project-description">
+                    Backend Developer en un equipo de 6 desarrolladores (3 backend, 3 frontend). Contribuí al desarrollo de APIs RESTful para la gestión de un cementerio parque, implementando sistema de autenticación y autorización con roles, diseño de modelos de datos y documentación con Swagger.
+                </p>
+                <div class="tech-container">
+                    <span class="tech-tag backend">Node.js</span>
+                    <span class="tech-tag backend">Nest.js</span>
+                    <span class="tech-tag backend">TypeScript</span>
+                    <span class="tech-tag database">PostgreSQL</span>
+                    <span class="tech-tag backend">TypeORM</span>
+                    <span class="tech-tag backend">JWT</span>
+                    <span class="tech-tag">Swagger</span>
+                    <span class="tech-tag">Nodemailer</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://cementerio-parque-api.onrender.com/api" class="project-link">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Demo API</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="https://deployfront-rouge.vercel.app/" class="project-link">
+                        <i class="fas fa-desktop"></i>
+                        <span>Demo Aplicación</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="https://github.com/ProyectoFinalGroup1/back" class="project-link">
+                        <i class="fas fa-code"></i>
+                        <span>Repositorio Backend</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="https://github.com/ProyectoFinalGroup1/front" class="project-link">
+                        <i class="fas fa-code"></i>
+                        <span>Repositorio Frontend</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-badge solo">Desarrollo Individual</span>
+                    <h3>E-commerce Backend</h3>
+                    <div class="project-meta">
+                        <span class="project-date">Dic. 2024 - Ene. 2025</span>
+                        <span class="project-association">Asociada con Henry</span>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Desarrollé el backend completo de una plataforma de comercio electrónico implementando arquitectura RESTful con NestJS y TypeScript. El sistema incluye autenticación de usuarios, gestión de productos, carrito de compras y procesamiento de pedidos. El proyecto demuestra mis habilidades en diseño de APIs robustas, implementación de patrones de diseño, manejo eficiente de bases de datos y prácticas de desarrollo seguro.
+                </p>
+                <div class="tech-container">
+                    <span class="tech-tag backend">NestJS</span>
+                    <span class="tech-tag backend">TypeScript</span>
+                    <span class="tech-tag database">PostgreSQL</span>
+                    <span class="tech-tag">Swagger</span>
+                    <span class="tech-tag">Render</span>
+                    <span class="tech-tag database">Supabase</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://ecommerce-g9u2.onrender.com/api" class="project-link">
+                        <i class="fas fa-book"></i>
+                        <span>Documentación API</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="https://github.com/lessslie/Ecommerce" class="project-link">
+                        <i class="fas fa-code"></i>
+                        <span>Repositorio</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="project-links">
-            <a href="https://ecommerce-g9u2.onrender.com/api" class="project-link">
-                <i class="fas fa-book"></i>
-                <span>Documentación API</span>
-                <i class="fas fa-external-link-alt"></i>
-            </a>
-            <a href="https://github.com/lessslie/Ecommerce" class="project-link">
-                <i class="fas fa-code"></i>
-                <span>Repositorio</span>
-                <i class="fas fa-external-link-alt"></i>
-            </a>
-        </div>
-    </div>
-</div>
 
     <!-- JavaScript simple para la navegación entre pestañas -->
     <script>
@@ -157,6 +172,33 @@
                     const targetId = this.getAttribute('href').substring(1) + '-section';
                     document.getElementById(targetId).classList.add('active');
                 });
+            });
+            
+            // Generar el código QR
+            const portfolioUrl = "https://lessslie.github.io/lesslie.github.io/";
+            
+            // Crear el elemento QR
+            const qr = qrcode(0, 'M');
+            qr.addData(portfolioUrl);
+            qr.make();
+            
+            // Mostrar el código QR
+            document.getElementById('qrcode').innerHTML = qr.createImgTag(5);
+            
+            // Configurar el botón de descarga
+            document.getElementById('download-qr').addEventListener('click', function() {
+                // Obtener la imagen del QR
+                const img = document.querySelector('#qrcode img');
+                
+                // Crear un enlace para descargar
+                const link = document.createElement('a');
+                link.href = img.src;
+                link.download = 'agata-portfolio-qr.png';
+                
+                // Simular clic para descargar
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
             });
         });
     </script>

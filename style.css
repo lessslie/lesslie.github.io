@@ -84,3 +84,86 @@ body {
   }
 }
 
+/* Estilos para la navegación por pestañas */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.nav-tab {
+  padding: 10px 15px;
+  margin: 0 5px;
+  background-color: #3d3d4a;
+  color: #e0e0e0;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.nav-tab:hover {
+  background-color: #4d4d5a;
+}
+
+.nav-tab.active {
+  background-color: #6c5ce7;
+  color: white;
+}
+
+/* Estilos para las secciones */
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+/* Estilos para el código QR */
+.qr-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #3d3d4a;
+  border-radius: 10px;
+}
+
+.qr-container h2 {
+  margin-top: 0;
+  color: #e0e0e0;
+}
+
+.qr-container p {
+  color: #a0a0a0;
+  margin-bottom: 20px;
+}
+
+#qrcode {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#qrcode img {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.qr-download-btn {
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.qr-download-btn:hover {
+  background-color: #5649c0;
+}
+
+.qr-download-btn i {
+  margin-right: 5px;
+}
